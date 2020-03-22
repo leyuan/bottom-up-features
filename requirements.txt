@@ -8,6 +8,4 @@ matplotlib
 pyyaml
 tensorboardX
 tqdm
-torchvision
-
 
