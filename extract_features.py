@@ -107,5 +107,5 @@ if __name__ == '__main__':
             image_bboxes = None    
 
         output_file = os.path.join(args.output_dir, im_file.split('.')[0]+'.npy')
-        save_features(output_file, image_feat, image_bboxes, keep_boxes)
+        save_features(output_file, image_feat, image_bboxes, keep_boxes, cls_prob)
         #torch.cuda.empty_cache()

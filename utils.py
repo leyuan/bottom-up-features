@@ -39,9 +39,9 @@ def get_image_blob(im):
     return blob, np.array(im_scale_factors)
 
 
-def save_features(output_file, features, boxes, keep_boxes):
+def save_features(output_file, features, boxes, keep_boxes, cls_prob):
     if boxes is None:
         res = features
     else:
-        res = {'features': features, 'boxes': boxes, 'keep_boxes': keep_boxes}
+        res = {'features': features, 'boxes': boxes, 'keep_boxes': keep_boxes, 'cls_prob': cls_prob}
     np.save(output_file, res)
